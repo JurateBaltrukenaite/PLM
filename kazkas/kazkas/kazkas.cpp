@@ -66,7 +66,7 @@ int main()
 	cout << setw(20) << "AUTOMOBILIAI" << endl;
 	spausdinimas(eilsk, A);
 
-	// PAGRINDINIS MENIU reikia keisti
+	// PAGRINDINIS MENIU geriau nekeisti
 	meniu_kartojimas();
 
 	do {
@@ -75,7 +75,7 @@ int main()
 			rikiavimas(eilsk, A);
 			cout << setw(20) << "SURIKIUOTI PAGAL PAGAMINIMO METUS" << endl;
 			spausdinimas(eilsk, A);
-			originalo_atkurimas(pastovuseilsk, eilsk, A, Kopija);
+			originalo_atkurimas(pastovuseilsk, eilsk, A, Kopija); //naudojama visose funkcijose
 			cout << "\nKa is meniu pasirinksite dar?" << endl;
 			meniu_kartojimas();
 		}
