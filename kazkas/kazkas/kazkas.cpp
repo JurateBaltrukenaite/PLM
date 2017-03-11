@@ -17,11 +17,11 @@ struct automobiliai {
 	int PagaminimoMetai;
 	string spalva;
 	string degalai;
-	int galia;
+	int galingumas;
 	float SanaudosMieste;
 	float SanaudosUzmiesty;
 	string Kebulas;
-	float Kaina;
+	float Kainuoja;
 };
 
 
