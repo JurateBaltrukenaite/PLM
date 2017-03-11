@@ -85,7 +85,7 @@ int main()
 			spausdinimas(eilsk, A);
 			originalo_atkurimas(pastovuseilsk, eilsk, A, Kopija);
 			cout << "test" << pastovuseilsk << eilsk;
-			cout << "\nKa is meniu pasirinksite dar?" << endl;
+			cout << "\nKa is meniu pasirinksite dabar?" << endl;
 			meniu_kartojimas();
 		}
 		if (meniu == '8') {
