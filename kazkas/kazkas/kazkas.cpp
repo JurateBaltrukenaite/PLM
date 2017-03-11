@@ -59,13 +59,13 @@ int main()
 	float benz = 4.09;
 	float dyz = 0.94;
 	float duj = 0.49;
-	float el = 0.088;
+	float el = 22.6;
 
 
 	cout << setw(20) << "AUTOMOBILIAI" << endl;
 	spausdinimas(eilsk, A);
 
-	// PAGRINDINIS MENIU
+	// PAGRINDINIS MENIU reikia keisti
 	meniu_kartojimas();
 
 	do {
