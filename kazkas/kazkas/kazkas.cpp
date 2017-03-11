@@ -3,7 +3,8 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
-#include <string>
+//man atrodo, sios bibliotekos nereikia
+
 #include <fstream>
 #include <cstring>
 //#include "degalai.h"
