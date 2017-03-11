@@ -16,7 +16,7 @@ struct automobiliai {
 	string valstybinisNr;
 	int PagaminimoMetai;
 	string spalva;
-	string degalai;
+	string degalines_klientas;
 	int gallia;
 	float SanaudosMieste;
 	float SanaudosUzmiesty;
@@ -56,7 +56,7 @@ int main()
 
 	// degalu kainos
 
-	float benz = 1.09;
+	float benz = 4.09;
 	float dyz = 0.94;
 	float duj = 0.49;
 	float el = 0.088;
@@ -87,7 +87,7 @@ int main()
 			cout << "\nKa is meniu pasirinksite dar?" << endl;
 			meniu_kartojimas();
 		}
-		if (meniu == 'k') {
+		if (meniu == '8') {
 			cout << setw(20) << "VIDUTINE 1000 Km KELIONES KAINA EURAIS" << endl;
 			degalu_sanaudos(eilsk, A, benz, dyz, el, duj);
 			originalo_atkurimas(pastovuseilsk, eilsk, A, Kopija);
