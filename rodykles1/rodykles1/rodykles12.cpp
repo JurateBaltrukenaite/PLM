@@ -69,3 +69,30 @@
 
 
 //aritmetiniai veiksmai
+
+#include <iostream>
+// 06_cpp.cpp 
+using namespace std;
+int main()
+{
+	int a;
+	// kintamas a  9 sveikasis sk. 
+	int *p;
+	// kintamasis p 9 rodykl÷ 
+	a = 99;
+	p = &a;
+	/* rodykle p rodo  i kint. a adresà */
+	//     Aritmetinis veiksmas 
+	//(*p)++;
+	(*p) = (*p) * 2;
+	
+
+	// padidinama rodykl÷s rodoma reikðm÷ VIENETU
+		// ÁSIMINKITE SINTAKSÆ
+		cout << "Rodykles *p rodomas turinys "<< *p << endl;
+	// spausdinama kintamojo a reiksm÷  
+	// jokiu bûdu ne p* 
+		cout << "kintamojo a reiksme" << a << endl;
+	system("pause");
+	return 0;
+}
