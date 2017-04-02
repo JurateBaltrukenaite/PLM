@@ -178,7 +178,7 @@ int main()
 	 //str1++; // Neteisinga iðraiðka, Kodel
 	// cout << "str1++ " << str1 << endl;
 	str2=str2+2; // Teisinga iðraiðka, KODöL - pakinta adresas
-	cout << "str2++ " << str2 << endl; //spausdina  "tra eilute", t.y. pradeda spausdinti dviem zenklais toliau, kadangi str2+2 reiskia perejima prie kito adreso
+	cout << "str2++ " << str2 << endl; //spausdina 
 	system("pause");
 	return 0;
 }
