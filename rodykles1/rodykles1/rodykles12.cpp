@@ -167,18 +167,92 @@
 //	return 0;
 //}
 
-#include <iostream> // 12_cpp.cpp
+//#include <iostream> // 12_cpp.cpp
+//using namespace std;
+//int main()
+//{
+//	char str1[] = "Pirma eilute"; //paprastas masyvas
+//	char *str2 = "Antra eilute"; //rodyklinis masyvas??
+//	cout << "str1 " << str1 << endl;
+//	cout << "str2 " << str2 << endl;
+//	 //str1++; // Neteisinga iðraiðka, Kodel
+//	// cout << "str1++ " << str1 << endl;
+//	str2=str2+2; // Teisinga iðraiðka, KODöL - pakinta adresas
+//	cout << "str2++ " << str2 << endl; //spausdina  "tra eilute", t.y. pradeda spausdinti dviem zenklais toliau, kadangi str2+2 reiskia perejima prie kito adreso
+//	system("pause");
+//	return 0;
+//}
+
+
+//#include <iostream> // 13_cpp.cpp
+//using namespace std;
+//void spausdink(char *rodykle);
+//int main()
+//{
+//	char str[] = "Sveiki!! Kaip veikia RODYKLES?";
+//	spausdink(str);
+//	cout << endl;
+//	system("pause");
+//	return 0;
+//}
+//void spausdink(char *rodykle)
+//{
+//	while (*rodykle)
+//		cout << *rodykle++; // spausdiname po vienà raidæ
+//							// nereik÷jo suþinoti masyvo ilgio !!!
+//}
+
+//#include <iostream> // 14_cpp.cpp
+//using namespace std;
+//int main()
+//{
+//	char *savaites_diena[7] = { "Pirmadienis", "Antradienis",
+//		"Treciadienis", "Ketvirtadienis", "Penktadienis", "Sestadienis",
+//		"Sekmadienis" };
+//	int i;
+//	for (i = 0; i<7; i++)
+//		cout << savaites_diena[i] << endl;
+//	system("pause");
+//	return 0;
+//}
+
+//#include <iostream> // 15_cpp.cpp
+//using namespace std;
+//int main()
+//{
+//	int *masyvas[4]; /* Rodykliø masyvas */
+//	int i = 10, j = 20, k = 30, l = 40;
+//	int m;
+//	masyvas[0] = &i;
+//	masyvas[1] = &j;
+//	masyvas[2] = &k;
+//	masyvas[3] = &l;
+//	for (m = 0; m <= 3; m++)
+//		cout << *(masyvas[m]) << endl;
+//	system("pause");
+//	return 0;
+//}
+
+  //Uzduotis
+
+
+#include <iostream> 
 using namespace std;
-int main()
+
+struct data
 {
-	char str1[] = "Pirma eilute";
-	char *str2 = "Antra eilute";
-	cout << "str1 " << str1 << endl;
-	cout << "str2 " << str2 << endl;
-	 //str1++; // Neteisinga iðraiðka, Kodel
-	// cout << "str1++ " << str1 << endl;
-	str2=str2+2; // Teisinga iðraiðka, KODöL - pakinta adresas
-	cout << "str2++ " << str2 << endl; //spausdina  "tra eilute", t.y. pradeda spausdinti dviem zenklais toliau, kadangi str2+2 reiskia perejima prie kito adreso
+	int diena;
+	int menuo;
+	int metai;
+} 
+d = { 24, 8, 2009 }; //kai duomenys nurodomi is karto
+int main() {
+
+
+	cout << d.diena << endl;
+	cout << d.menuo << endl;
+	cout << d.metai << endl;
+
 	system("pause");
 	return 0;
 }
