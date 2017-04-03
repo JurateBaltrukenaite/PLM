@@ -1,3 +1,18 @@
+// 1 pavyzdys. Kiekvienas kintamasis turi sav reiksme ir adresa
+
+
+#include <iostream> //01_cpp.cpp
+using namespace std;
+int main()
+{
+	int a = 10;
+	cout << "kintamojo a reiksme " << a << endl;
+	cout << "kintamojo a adresas " << &a << endl;
+	system("pause");
+
+	return 0;
+}
+
 //#include <iostream>
 ////02_cpp.cpp 
 //using namespace std;
@@ -22,12 +37,12 @@ int main()
 {
 	int kintamasis = 24;
 	// kinamajam priskiriama reiksme = 24 */ 
- int *rodykle; // deklaruojamas kintamasis rodykle,  dar sakoma: "rodykle á .//.."  
+	int *rodykle; // deklaruojamas kintamasis rodykle,  dar sakoma: "rodykle á .//.."  
 	rodykle = &kintamasis;
 	// rodykle atsimena kintamojo adresà 
 	// rodykl÷ rodo á kintamojo adresà 
 	cout <<
-		"Kintamojo reikðm÷ "<< *rodykle << endl; // atsausdina 24;
+		"Kintamojo reikðm÷ " << *rodykle << endl; // atsausdina 24;
 	// spausdiname rodykl÷s rodomo kintamojo adreso sau
 	//goma reikðm÷
 		// 
