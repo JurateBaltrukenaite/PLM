@@ -236,23 +236,79 @@
   //Uzduotis
 
 
-#include <iostream> 
-using namespace std;
+//#include <iostream> 
+//using namespace std;
+//
+//struct data
+//{
+//	int diena;
+//	int menuo;
+//	int metai;
+//} 
+//d = { 24, 8, 2009 }; //kai duomenys nurodomi is karto
+//int main() {
+//
+//	cout << d.diena << endl;
+//	cout << d.menuo << endl;
+//	cout << d.metai << endl;
+//
+//	system("pause");
+//	return 0;
+//}
 
-struct data
-{
-	int diena;
-	int menuo;
-	int metai;
-} 
-d = { 24, 8, 2009 }; //kai duomenys nurodomi is karto
-int main() {
+//#include <iostream> 
+//using namespace std;
+//
+//struct data {// data 9 struktûros duomenø tipas // duomenø tipas turi tris narius (laukus) 
+//	int diena; // laukas (narys) diena. 
+//	int menuo; // laukas (narys) menuo. 
+//	int metai; // laukas (narys) metai. 
+//};
+////data d; // sukurimas kintamasis d, kuris bus data duomenø tipo
+//int main() {
+//	struct data d; // sukurimas kintamasis d, kuris bus data duomenø tipo
+//	d.diena = 24;// struktûros kint. D nariui diena priskiriama reikğme 24
+//	d.menuo = 8;// struktûros kint. D nariui menuo priskiriama reikğm÷ 8
+//	d.metai = 2009;// struktûros kint. D nariui metai priskiriama reikğm÷ 2009
+//
+//	cout << d.diena << endl;
+//	cout << d.menuo << endl;
+//	cout << d.metai << endl;
+//
+//	system("pause");
+//	return 0;
+//}
+
+//#include <iostream> 
+//using namespace std;
+//
+//struct data {// data 9 struktûros duomenø tipas // duomenø tipas turi tris narius (laukus) 
+//	int diena; // laukas (narys) diena. 
+//	int menuo; // laukas (narys) menuo. 
+//	int metai; // laukas (narys) metai. 
+//};
+////data d; // sukurimas kintamasis d, kuris bus data duomenø tipo
+//
+//int main() {
+//	struct data d; // sukurimas kintamasis d, kuris bus data duomenø tipo
+//
+//
+//	cout << "IVESKITE dienà (sveikasis skaièius) ";
+//	cin >> d.diena;
+//	cout << "IVESKITE m÷nesá (sveikasis skaièius) ";
+//	cin >> d.menuo;
+//	cout << "IVESKITE metus (sveikasis skaièius) ";
+//	cin >> d.metai;
+//
+//	cout << "diena  " <<d.diena << endl;
+//	cout <<"menuo  " << d.menuo << endl;
+//	cout <<" metai  " << d.metai << endl;
+//
+//
+//	system("pause");
+//	return 0;
+//}
 
 
-	cout << d.diena << endl;
-	cout << d.menuo << endl;
-	cout << d.metai << endl;
 
-	system("pause");
-	return 0;
-}
+
