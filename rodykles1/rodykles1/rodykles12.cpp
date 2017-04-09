@@ -1,4 +1,7 @@
 
+//LD3 Objektinis programavimas
+//Jurate Baltrukenaite, PLM16014
+
 //#include <iostream> //01_cpp.cpp
 //using namespace std;
 //int main()
@@ -24,18 +27,19 @@
 //{
 //	cout << "Funkcijos adresas " << &asmuo << endl; // &zenklas prie bet kokio kinamojo rodo jo adresa, adresa gali tureti ir funkcija, ne tik kintamasis
 //	asmuo();
+//	cout << *asmuo << endl;
 //
 //	system("pause");
 //	return 0;
 //}
-
+//
 //#include <iostream> //03_cpp.cpp
 //using namespace std;
 //int main()
 //{
 //	int kintamasis = 24; // kinamajam priskiriama reiksme = 24 */ 
 //	int *rodykle; // deklaruojamas kintamasis rodykle,  dar sakoma: "rodykle á .//.."  
-//	rodykle = &kintamasis;// rodykle atsimena kintamojo adresà // rodykl÷ rodo á kintamojo adresà 
+//	rodykle =& kintamasis;// rodykle atsimena kintamojo adresà // rodykl÷ rodo á kintamojo adresà 
 //	cout << "Kintamojo reikðme " << *rodykle << endl; // atsausdina 24;// spausdiname rodykles rodomo kintamojo adreso saugoma reikðme
 //
 //	cout << rodykle << endl; // kai rodykle be *, ji rodo kintamojo adresa, bet ne jo reiksme
@@ -78,9 +82,10 @@
 //	a = 99;
 //	p = &a; /* rodykle p rodo  i kint. a adresà */
 //	//     Aritmetinis veiksmas 
+//	cout <<a<<  &a << endl;
 //	(*p)++; // padidinama rodyklës rodomareikðme VIENETU
 //
-//	cout << "Rodykles *p rodomas turinys " << *p << endl; //spausdina 100, t.y. rodyklës rodoma reiksmæ, padidintà vienetu
+//	cout << "Rodykles *p rodomas turinys " << (*p) << endl; //spausdina 100, t.y. rodyklës rodoma reiksmæ, padidintà vienetu
 //	cout << "rodykles rodomas adresas" << p << endl; //spausdina  a adresa
 //	cout << "kintamojo a adesas" << &a << endl; //spausdina ta pati, ka ir pries tai esanti eilute
 //
@@ -90,7 +95,7 @@
 //	system("pause");
 //	return 0;
 //}
-
+//
 
 //#include <iostream> // 07_cpp.cpp 
 //using namespace std;
@@ -130,9 +135,14 @@
 //{
 //	int i;
 //	int sk[5] = { 10, 20, 30, 40, 50 };
+//	cout << *sk+2 << endl; // spausdina pirma masyvo elemento reiksme+2=12
+//	cout << (*sk) + 2 << endl; // taip pat pirma reiksme+2=12
+//	cout << *(sk + 2) << endl; //spausdina trecio masyvo elemento reiksme, lygiai kaip butu sk[2]
+//	*(sk + 2) = 2569; //perrasome antro masyvo elemento reiksme naudodami rodykle.
+//	cout << "........................................." << endl;
 //	for (i = 0; i < 5; i++)
 //		cout << *(sk + i) << endl; // masyvo elementà spausdiname naudodami
-//								   // rodykles rodomo adreso reikðmæ     Bet kodel??? rodykle niekur nedeklaruota!!
+//								   // rodykles rodomo adreso reikðmæ     
 //	system("pause");
 //	return 0;
 //}
@@ -162,10 +172,13 @@
 //	p = sk;
 //	for (i = 0; i < 5; i++)
 //		cout << *p++ << endl; // spausdiname rodykl÷s rodomà reikðmæ
-//	cout << *(p + i) << endl;				  // ir pereiname prie tolimesnio elemento
+//	//cout << *(p + i) << endl;			// ir pereiname prie tolimesnio elemento
 //	system("pause");
 //	return 0;
 //}
+
+                                           //RODYKLES IR SIMBOLIU EILUTES
+
 
 //#include <iostream> // 12_cpp.cpp
 //using namespace std;
@@ -175,7 +188,7 @@
 //	char *str2 = "Antra eilute"; //rodyklinis masyvas??
 //	cout << "str1 " << str1 << endl;
 //	cout << "str2 " << str2 << endl;
-//	 //str1++; // Neteisinga iðraiðka, Kodel
+//	 //str1++; // Neteisinga iðraiðka, nes tai nera rodykle ar adresas
 //	// cout << "str1++ " << str1 << endl;
 //	str2=str2+2; // Teisinga iðraiðka, KODöL - pakinta adresas
 //	cout << "str2++ " << str2 << endl; //spausdina  "tra eilute", t.y. pradeda spausdinti dviem zenklais toliau, kadangi str2+2 reiskia perejima prie kito adreso
@@ -183,7 +196,7 @@
 //	return 0;
 //}
 
-
+//
 //#include <iostream> // 13_cpp.cpp
 //using namespace std;
 //void spausdink(char *rodykle);
@@ -216,99 +229,60 @@
 //	return 0;
 //}
 
+//#include <string>
 //#include <iostream> // 15_cpp.cpp
 //using namespace std;
-//int main()
-//{
-//	int *masyvas[4]; /* Rodykliø masyvas */
-//	int i = 10, j = 20, k = 30, l = 40;
+//int main(){
+//	string *masyvas[4]; /* Rodykliø masyvas */
+//	string i = "256698744", j = "labas vakaras, pones ir poniai", k = "30", l = "karameliniu obuoliu pyragas su ledais";
 //	int m;
 //	masyvas[0] = &i;
 //	masyvas[1] = &j;
 //	masyvas[2] = &k;
 //	masyvas[3] = &l;
-//	for (m = 0; m <= 3; m++)
+//	for (m = 0; m <= 3; m++) {
 //		cout << *(masyvas[m]) << endl;
+//	}
 //	system("pause");
 //	return 0;
 //}
 
-  //Uzduotis
+                                 //// Rodyklës ir struktûros
 
 
-//#include <iostream> 
-//using namespace std;
-//
-//struct data
-//{
-//	int diena;
-//	int menuo;
-//	int metai;
-//} 
-//d = { 24, 8, 2009 }; //kai duomenys nurodomi is karto
-//int main() {
-//
-//	cout << d.diena << endl;
-//	cout << d.menuo << endl;
-//	cout << d.metai << endl;
-//
-//	system("pause");
-//	return 0;
-//}
-
-//#include <iostream> 
-//using namespace std;
-//
-//struct data {// data 9 struktûros duomenø tipas // duomenø tipas turi tris narius (laukus) 
-//	int diena; // laukas (narys) diena. 
-//	int menuo; // laukas (narys) menuo. 
-//	int metai; // laukas (narys) metai. 
-//};
-////data d; // sukurimas kintamasis d, kuris bus data duomenø tipo
-//int main() {
-//	struct data d; // sukurimas kintamasis d, kuris bus data duomenø tipo
-//	d.diena = 24;// struktûros kint. D nariui diena priskiriama reikðme 24
-//	d.menuo = 8;// struktûros kint. D nariui menuo priskiriama reikðm÷ 8
-//	d.metai = 2009;// struktûros kint. D nariui metai priskiriama reikðm÷ 2009
-//
-//	cout << d.diena << endl;
-//	cout << d.menuo << endl;
-//	cout << d.metai << endl;
-//
-//	system("pause");
-//	return 0;
-//}
-
-//#include <iostream> 
-//using namespace std;
-//
-//struct data {// data 9 struktûros duomenø tipas // duomenø tipas turi tris narius (laukus) 
-//	int diena; // laukas (narys) diena. 
-//	int menuo; // laukas (narys) menuo. 
-//	int metai; // laukas (narys) metai. 
-//};
-////data d; // sukurimas kintamasis d, kuris bus data duomenø tipo
-//
-//int main() {
-//	struct data d; // sukurimas kintamasis d, kuris bus data duomenø tipo
-//
-//
-//	cout << "IVESKITE dienà (sveikasis skaièius) ";
-//	cin >> d.diena;
-//	cout << "IVESKITE m÷nesá (sveikasis skaièius) ";
-//	cin >> d.menuo;
-//	cout << "IVESKITE metus (sveikasis skaièius) ";
-//	cin >> d.metai;
-//
-//	cout << "diena  " <<d.diena << endl;
-//	cout <<"menuo  " << d.menuo << endl;
-//	cout <<" metai  " << d.metai << endl;
-//
-//
-//	system("pause");
-//	return 0;
-//}
-
-
+#include <iostream> // 20_cpp.cpp 
+using namespace std;
+int main()
+{
+	struct irasas {
+		int x;
+		int y;
+	};
+	
+	irasas p1; //999 deklaruojame iraso tipo kintamuosius p1 ir p2
+	irasas p2;
+	p1.x = 12; // pradin÷s reikðm÷s; 
+	p1.y = 45;
+	cout <<" PRADINES reiksmes:  " << "p1.x= " << p1.x <<
+		"p1.y= " << p1.y << endl; // nario (lauko) pasiekiamas "tasko operatoriumi" 
+	int h1 = p1.x; // galima priskirti kintamajam 
+	cout << " h1 reiksme:  "<< h1 << endl;
+	p2.y = p1.y; // galima kopijuoti i kita struktura 
+	cout << " p2.y =  " << p2.y << endl;
+	cout <<" -------------------------" << endl;
+	// NAUDOJANT RODYKLÆ   
+		irasas* rodykle;// aprasome rodykle i irasa 
+	rodykle =new irasas; // !!! dinamiðkai sukuriam nauja rodykl÷ 
+	rodykle -> x = 87;// laukams suteikimaos reikðm÷s 
+	rodykle -> y = 1;
+	int h2 = rodykle -> x;// nauojant rodykles poperatoriu 
+	int h3 = (*rodykle).x;// tas pats kaip ir h2, tik naudojant taðko operatoriø
+		cout <<" h2 reikðm÷:  "<< h2 << endl;
+	cout <<" h3 reikðme:  "<< h3 << endl;
+	cout <<" rodykle -> x:  "<< rodykle -> x << endl;
+	cout <<" rodykle -> y:  "<< rodykle -> y << endl;
+	system("pause");
+	return 0;
+}
 
 
