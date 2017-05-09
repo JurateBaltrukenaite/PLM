@@ -208,91 +208,117 @@ using namespace std;
 
 
 class asmuo {
-public: string vardas;
-		
-		 
+public: struct zmogus {
+	string vardas;
+	float balansas;
+};
+		zmogus zmogutis;
 public: void vardo_priskyrimas() {  //public (visiems prieinama) klases funkcija, skirta ivesti varda.
+
 	cout << "Iveskite savo varda" << endl;
-	cin >> vardas;
-
-	};
-	void vardo_spausdinimas() {
-	cout << vardas;
-}
-	
-	
+	cin >> zmogutis.vardas;
 
 };
-class reikalingi_pirkiniai : public  asmuo {  //isvestine klase, paveldinti pagrindines bazines klases savybes.
-
-public:void reikalingi_produktai(string kieno) {
-	string produktai[20];
-	string *rodykle;
-	int i=0, elsk=0;
-	
-	for (i=0; i<1; i++){
-
-		cout << "Ko reikia nupirkti?" << endl;
+public: void vardo_spausdinimas() {
 
 
-		cin >> produktai[i];
-		i++;
-		elsk = i;
-	}
-		
-	
-	for (i = 0; i < elsk; i++) {
-		cout << "reikia nupirkti:  " << produktai[i] << endl;
-
-	}
-	cout << "sarasa sudare   " << kieno << endl;
-
+	cout << "zmogucio vardas yra  " << zmogutis.vardas << endl;
 }
-	  
+
+
+
 };
-class nupirkta :public reikalingi_pirkiniai {
+class pirkiniai : public  asmuo {  //isvestine klase, paveldinti pagrindines bazines klases savybes.
+public: string produktai[20];
 public: struct nupirkti_produktai {
 	string pavadinimas;
 	float kaina;
 };
+		nupirkti_produktai nupirkau[20];
 
-public: void nupirkau (string kas) {
+
+		int reikalingu_produktu_kiekis;
+		int nupirktu_produktu_kiekis;
+
+public:void reikalingi_produktai(string kieno) {
+
+	int i=0;
+	reikalingu_produktu_kiekis = -1;
+
+	cout << "Ko reikia nupirkti?" << endl;
 	
-	nupirkti_produktai Npr[20];
-	
-	
-	cout << "ka nupirkai? kiek kainavo? " << endl;
-	cin >> Npr[0].pavadinimas;
-	cin >> Npr[0].kaina;
-		cout << Npr[0].pavadinimas << "  "<<Npr[0].kaina <<endl;
-		
-}
-		
-		
+	for (i = 0; ; i++) {
+		cin >> produktai[i];
+		reikalingu_produktu_kiekis++;
+
+		if (produktai[i] == "viskas")
+			break;
+	}
+	cout << "sarasa sudare   " << kieno << endl;
+
 };
 
 
 
-	
-	
+public: void buvau_parduotuvej() {
+
+	cout << "NPK  " << reikalingu_produktu_kiekis<<endl;
+	cout << "produkt" << produktai[0] << endl;
+	cout << "Kà pirkai? Kiek kainavo? " << endl;
+
+	for (int i = 0; ; i++) {
+		cout << "ka?  " << endl;
+		
+		cin >> nupirkau[i].pavadinimas;
+		if (nupirkau[i].pavadinimas == "viskas")
+			break;
+		cout << "kiek  " << endl;
+		cin >> nupirkau[i].kaina;
+		nupirktu_produktu_kiekis=i+1;
+
+	}
+
+	cout << "nupirktu_produktu_kiekis  " << nupirktu_produktu_kiekis << endl;
+
+};
+public: void balansas() {
+	for (int i = 0; i <= nupirktu_produktu_kiekis; i++) {
+		for (int j = 0; j <= reikalingu_produktu_kiekis; j++) {
+
+			if (nupirkau[i].pavadinimas == produktai[j]) {
+				
+			}
+		}
+	}
+
+};
+
+};
+
+
+
+
 
 
 int main() {
 	asmuo x; //konstruktorius
-	reikalingi_pirkiniai sarasas; //konstruktorius
-	nupirkta pirkiniai;
-	
+	pirkiniai y;
+	//reikalingi_pirkiniai sarasas; //konstruktorius
+	//nupirkta pirkiniai;
+
 
 
 	x.vardo_priskyrimas(); //kontr
 
+	y.reikalingi_produktai(x.zmogutis.vardas);
+	cout << y.produktai[0] << endl;
 
 
 
 	x.vardo_spausdinimas();
-	
-	sarasas.reikalingi_produktai(x.vardas);
-	pirkiniai.nupirkau(x.vardas);
-	
+	y.buvau_parduotuvej();
+	//sarasas.reikalingi_produktai(x.zmogutis.vardas);
+	//pirkiniai.nupirkau(x.zmogutis.vardas);
+	//sarasas.reikalingi_produktai(x.zmogutis.vardas);
 	system("pause");
 };
