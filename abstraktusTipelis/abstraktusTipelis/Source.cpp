@@ -267,10 +267,6 @@ public: void nupirkau (string kas) {
 		cout << Npr[0].pavadinimas << "  "<<Npr[0].kaina <<endl;
 		
 }
-		class balansas : public reikalingi_pirkiniai {  //nepabaigta ir neveikianti klase
-		public: void spausdinimasis(){
-			cout << Npr[0];
-		}
 		
 		
 };
@@ -288,7 +284,7 @@ int main() {
 	
 
 
-	x.vardo_priskyrimas(); 
+	x.vardo_priskyrimas(); //kontr
 
 
 
